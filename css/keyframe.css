@@ -21,10 +21,11 @@
 #banner {
     height: 650px;
     background-color: var(--bgcolor);
+    overflow: hidden;
 }
 #banner img{
     max-width: 100%;
-    
+    opacity: 0;
 }
 .container{
     width: var(--content);
@@ -55,7 +56,7 @@
     
 }
 .right .abs{
-    left: 5%;
+    left: -5%;
     right: -15%;
 }
 
@@ -68,3 +69,18 @@
     width: 25%;
     height: 25%;
 } */
+.hp{
+    animation-name: up;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+@keyframes up {
+    0%{
+        opacity: 0;
+        transform: translateY(100%);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
